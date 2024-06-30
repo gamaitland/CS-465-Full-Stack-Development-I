@@ -32,7 +32,7 @@ export class AddTripComponent implements OnInit {
       resort: ['', Validators.required],
       perPerson: ['', Validators.required],
       image: ['', Validators.required],
-      descriprion: ['', Validators.required],
+      description: ['', Validators.required],
     })
   }
 
@@ -43,7 +43,7 @@ export class AddTripComponent implements OnInit {
       .subscribe({
         next: (data: any) => {
           console.log(data);
-          this.router.navigate(['']);
+          this.router.navigate(['list-trips']);
         },
         error: (error: any) => {
           console.log('Error: ' + error);
